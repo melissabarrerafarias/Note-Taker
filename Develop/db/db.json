@@ -5,14 +5,19 @@
       "text": "Test text"
     },
     {
-      "title": "Melissa's notes",
-      "text": "My notes",
+      "title": "This is a new note",
+      "text": "I am writing this new note!",
       "id": "1"
     },
     {
-      "title": "Kate's Notes",
-      "text": "this is kate's note",
+      "title": "This is another new note",
+      "text": "this is another new note ",
       "id": "2"
+    },
+    {
+      "title": "Yep and this is another one",
+      "text": "yes, and this is another one ",
+      "id": "3"
     }
   ]
 }

@@ -19,29 +19,37 @@ function newNote(body, notesArray) {
     return body;
 }
 
+
 // route to index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 });
+
 
 // route to notes.html
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
+
 // reads the db.json file and returns all saved notes as JSON
 app.get('/api/notes', (req, res) => {
     res.json(notes);
 }); 
 
-// route that accepts data to be used/stored server-side
 
+// route that accepts data to be used/stored server-side
 app.post('/api/notes', (req, res) => {
     req.body.id = notes.length.toString();
     
     const note = newNote(req.body, notes);
 
     res.json(note);
+});
+
+// deletes note
+app.delete('/api/notes/:id', (req, res) => {
+    // code to delete note goes here
 })
 
 app.listen(3001, () => {

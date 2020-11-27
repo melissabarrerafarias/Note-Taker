@@ -19,6 +19,13 @@ app.get('/api/notes', (req, res) => {
     res.json(notes);
 }); 
 
+// route that accepts data to be used/stored server-side
+
+app.post('/api/notes', (req, res) => {
+    console.log(req.body);
+    res.json(req.body);
+})
+
 app.listen(3001, () => {
     console.log(`API server now on port 3001!`);
 });

@@ -1,8 +1,23 @@
-const express = require('express');
+const fs = require('fs');
 const path = require("path");
+const express = require('express');
 const app = express();
+app.use(express.urlencoded({ extended: true })); // parse string or array data 
+app.use(express.json()); // parse JSON data
 const notes = require('./db/db.json');
 app.use(express.static('public'));
+
+
+function newNote(body, notesArray) {
+    const note = body;
+    notesArray.push(note);
+
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), 
+    JSON.stringify({ notes: notesArray }, null, 2)
+    );
+
+    return body;
+}
 
 // route to index.html
 app.get('/', (req, res) => {
@@ -22,8 +37,11 @@ app.get('/api/notes', (req, res) => {
 // route that accepts data to be used/stored server-side
 
 app.post('/api/notes', (req, res) => {
-    console.log(req.body);
-    res.json(req.body);
+    req.body.id = notes.length.toString();
+
+    const note = newNote(req.body, notes);
+    
+    res.json(note);
 })
 
 app.listen(3001, () => {

@@ -4,8 +4,8 @@ const express = require('express');
 const app = express();
 app.use(express.urlencoded({ extended: true })); // parse string or array data 
 app.use(express.json()); // parse JSON data
-const { notes } = require('./db/db.json');
-app.use(express.static('public'));
+const { notes } = require('./Develop/db/db.json');
+app.use(express.static('./Develop/public'));
 
 
 function newNote(body, notesArray) {
@@ -22,13 +22,13 @@ function newNote(body, notesArray) {
 
 // route to index.html
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './Develop/public/index.html'));
 });
 
 
 // route to notes.html
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
+    res.sendFile(path.join(__dirname, './Develop/public/notes.html'));
 });
 
 

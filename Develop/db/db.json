@@ -1,38 +1,11 @@
-{
-  "notes": [
-    {
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "title": "This is a new note",
-      "text": "I am writing this new note!",
-      "id": "1"
-    },
-    {
-      "title": "This is another new note",
-      "text": "this is another new note ",
-      "id": "2"
-    },
-    {
-      "title": "Yep and this is another one",
-      "text": "yes, and this is another one ",
-      "id": "3"
-    },
-    {
-      "title": "Laundry ",
-      "text": "i need to do laundry tomorrow before work ",
-      "id": "4"
-    },
-    {
-      "title": "this is another note",
-      "text": "yep another note",
-      "id": "5"
-    },
-    {
-      "title": "yes new note",
-      "text": "new note #6",
-      "id": "6"
-    }
-  ]
-}
+[
+  {
+    "title": "Test Title",
+    "text": "Test text"
+  },
+  {
+    "title": "new note ",
+    "text": "this is a new note ",
+    "id": "1"
+  }
+]

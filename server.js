@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(express.urlencoded({ extended: true })); // parse string or array data 
 app.use(express.json()); // parse JSON data
-const { notes } = require('./Develop/db/db.json');
+const  notes  = require('./Develop/db/db.json');
 app.use(express.static('./Develop/public'));
 
 
@@ -14,22 +14,20 @@ function newNote(body, notesArray) {
     notesArray.push(note);
 
     fs.writeFileSync(path.join(__dirname, './Develop/db/db.json'), 
-    JSON.stringify({ notes: notesArray }, null, 2)
+    JSON.stringify(notesArray, null, 2)
     );
-
     return body;
 }
 
 function filterNote(id) {
     const result = notes.filter(note => note.id != id);
 
-
-  
     fs.writeFileSync(path.join(__dirname, './Develop/db/db.json'), 
-    JSON.stringify({ notes: result }, null, 2)
+    JSON.stringify(result, null, 2)
     );
 
-    return body;
+    console.log(id);
+    console.log(result);
 }
 
  
@@ -66,12 +64,10 @@ app.delete('/api/notes/:id', (req, res) => {
     const id = req.params.id;
 
     filterNote(id);
+
+    //res.redirect('/notes')
 })
 
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
- 
-
-// DELETE /api/notes/:id should receive a query parameter containing the id of a note to delete. In order to delete a note, you'll need to read all notes from the db.json file, remove the note 
-// with the given id property, and then rewrite the notes to the db.json file.

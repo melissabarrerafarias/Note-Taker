@@ -17,7 +17,7 @@ function newNote(body, notesArray) {
     JSON.stringify(notesArray, null, 2)
     );
     return body;
-}
+} 
 
 function filterNote(id) {
     const result = notes.filter(note => note.id != id);

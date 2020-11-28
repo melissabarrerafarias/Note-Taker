@@ -19,6 +19,19 @@ function newNote(body, notesArray) {
 
     return body;
 }
+
+function filterNote(id) {
+    const result = notes.filter(note => note.id != id);
+
+
+  
+    fs.writeFileSync(path.join(__dirname, './Develop/db/db.json'), 
+    JSON.stringify({ notes: result }, null, 2)
+    );
+
+    return body;
+}
+
  
 
 // route to index.html
@@ -50,7 +63,9 @@ app.post('/api/notes', (req, res) => {
 
 // deletes note
 app.delete('/api/notes/:id', (req, res) => {
-    // code to delete note goes here
+    const id = req.params.id;
+
+    filterNote(id);
 })
 
 app.listen(PORT, () => {

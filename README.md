@@ -15,3 +15,13 @@ Here is what the app looks like:
 
 ![](image/note-taker.png)
 
+Here is the link to the application! Check it out!
+
+[Click here to check it out!](https://murmuring-basin-76991.herokuapp.com/)
+
+## Questions
+ Github Username : melissabarrerafarias
+  
+  [Link to Github Profile](https://github.com/melissabarrerafarias)
+
+  If you have any further questions or curiosities, feel free to contact me through email at melissabarrerafarias@gmail.com!

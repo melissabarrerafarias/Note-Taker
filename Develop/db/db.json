@@ -23,6 +23,16 @@
       "title": "Laundry ",
       "text": "i need to do laundry tomorrow before work ",
       "id": "4"
+    },
+    {
+      "title": "this is another note",
+      "text": "yep another note",
+      "id": "5"
+    },
+    {
+      "title": "yes new note",
+      "text": "new note #6",
+      "id": "6"
     }
   ]
 }

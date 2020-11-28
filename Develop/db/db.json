@@ -1,16 +1,32 @@
 [
   {
     "title": "Test Title",
-    "text": "Test text"
+    "text": "Test text", 
+    "id": "0"
   },
   {
-    "title": "new note ",
-    "text": "this is a new note ",
+    "title": "Laundry",
+    "text": "take out laundry before work today!",
     "id": "1"
   },
   {
-    "title": "this is a new note",
-    "text": "this is another new note",
+    "title": "Submit Essay ",
+    "text": "Submit essay for Mr.Johnson's class",
     "id": "2"
+  },
+  {
+    "title": "Call Mom",
+    "text": "remember to call mom later before bed",
+    "id": "3"
+  },
+  {
+    "title": "Take car to mechanic",
+    "text": "car appointment @6 to check engine",
+    "id": "4"
+  },
+  {
+    "title": "call vet",
+    "text": "Call the vet for Mona's checkup",
+    "id": "5"
   }
 ]
